@@ -125,37 +125,13 @@ $(document).ready(function() { "use strict";
   }
   
   //Check hash on start
-  function updateHash(){
-    var hashLink = window.location.href.split("#")[1];
-    if (hashLink) {
-      //find a slide
-      if ( $('.slide[data-name="' +hashLink+ '"]').length > 0 ){
-        //asking for the slide?
-        var requestedElement = $('.slide[data-name="' +hashLink+ '"]');
-
-        //scroll to a desired slide
-        if ( (window.isMobile && window.isSimplifiedMobile) || window.isScroll ){
-          //scroll mode
-          if (requestedElement.length) {
-            if (!window.preload || window.loaded) {
-              $('html,body').stop().clearQueue().animate({scrollTop:requestedElement.position().top},window.effectSpeed);
-            } else {
-              $(window).on('load', function(){
-                $('html,body').stop().clearQueue().animate({scrollTop:requestedElement.position().top},window.effectSpeed);
-              });
-            }
-          }
-        } else {
-          //slide mode
-          window.stage = $('.slide').index(requestedElement) + 1;
-          showSlide(window.stage);
-        }
-      }
-    }
-  }
-
-  updateHash();
   
+                              
+                              
+                              
+                              
+                              
+                              
   //Listen history changes
   $(window).on('popstate',function(e) {
     setTimeout(function(){
